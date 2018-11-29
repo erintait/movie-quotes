@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
+import auth from '../hoc/auth';
 
-export default props => (
-    <div>
-        <h1 className="center">Movie Quotes</h1>
-        <h5>Memories can be distorted.</h5>
-    </div>
-)
+class Quotes extends Component {
+
+    render(){
+
+        return (
+            <div>
+                <h1 className="center">Movie Quotes</h1>
+                <h5>A wizard is never late, nor is he early. He arrives precisely when he means to.</h5>
+            </div>
+        );
+    }
+}
+
+export default auth(Quotes);
